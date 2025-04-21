@@ -1,0 +1,72 @@
+/* src/components/Auth.css */
+
+.auth-container {
+    max-width: 400px;
+    margin: 4rem auto;
+    padding: 2.5rem;
+    border-radius: 12px;
+    background-color: #f8fbff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .auth-container h2 {
+    text-align: center;
+    color: #07487c;
+    margin-bottom: 2rem;
+  }
+  
+  .auth-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .auth-container input {
+    padding: 0.9rem;
+    margin-bottom: 1.2rem;
+    border-radius: 8px;
+    border: 1px solid #c8ddee;
+    font-size: 1rem;
+    background-color: #f9fcff;
+    transition: border 0.3s;
+  }
+  
+  .auth-container input:focus {
+    border-color: #0b5394;
+    outline: none;
+    background-color: #fff;
+  }
+  
+  .auth-container button {
+    padding: 0.9rem;
+    background-color: #0b5394;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .auth-container button:hover {
+    background-color: #07487c;
+  }
+  
+  .toggle-text {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    color: #333;
+  }
+  
+  .toggle-link {
+    color: #0b5394;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 4px;
+  }
+  
+  .toggle-link:hover {
+    text-decoration: underline;
+  }
+  

@@ -1,0 +1,98 @@
+/* App.css */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f4f8;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.App {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+}
+
+.title {
+  font-size: 2em;
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-field {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1em;
+}
+
+.input-field:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+.predict-button {
+  background-color: #3498db;
+  color: white;
+  padding: 14px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.predict-button:hover {
+  background-color: #2980b9;
+}
+
+.result {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #2ecc71;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.metrics-container {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.metrics-title {
+  font-size: 1.5em;
+  color: #333;
+  text-align: center;
+}
+
+.metrics-list {
+  list-style: none;
+  padding: 0;
+}
+
+.metrics-list li {
+  font-size: 1.1em;
+  color: #333;
+  margin: 5px 0;
+}

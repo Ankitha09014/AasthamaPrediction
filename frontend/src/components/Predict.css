@@ -1,0 +1,93 @@
+/* Predict.css */
+
+.App {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 2rem;
+    background-color: #f5faff;
+    min-height: 100vh;
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 2rem;
+    color: #0b5394;
+    margin-bottom: 2rem;
+  }
+  
+  .form-container {
+    max-width: 600px;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 0 auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .input-group {
+    margin-bottom: 1.2rem;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #b3cde0;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #f9fbfd;
+  }
+  
+  .input-field:focus {
+    outline: none;
+    border-color: #0b5394;
+    background-color: #ffffff;
+  }
+  
+  .predict-button {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    background-color: #0b5394;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .predict-button:hover {
+    background-color: #07487c;
+  }
+  
+  .result {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #006400;
+  }
+  
+  .metrics-container {
+    margin-top: 2rem;
+    background-color: #e6f2ff;
+    padding: 1.5rem;
+    border-radius: 10px;
+  }
+  
+  .metrics-title {
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #0b5394;
+  }
+  
+  .metrics-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .metrics-list li {
+    margin-bottom: 0.5rem;
+  }
+  

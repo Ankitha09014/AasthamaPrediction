@@ -1,0 +1,301 @@
+Patient_ID,Age,Gender,Smoking_Status,Medvalue,Medication,Intensity of cough,Asthma_Diagnosis,Range
+1,26,Female,Non-Smoker,1,Inhaler,high cough,Yes,88.946077
+2,52,Female,Ex-Smoker,0,None,low cough,No,97.55108449
+3,56,Female,Ex-Smoker,1,Inhaler,high cough,Yes,89.69069347
+4,55,Male,Current Smoker,2,Controller Medication,medium cough,Yes,92.89524155
+5,43,Female,Current Smoker,0,None,low cough,No,97.74748324
+6,23,Male,Non-Smoker,0,None,low cough,No,98.72936367
+7,33,Female,Current Smoker,0,None,low cough,No,97.43912921
+8,20,Male,Current Smoker,2,Controller Medication,medium cough,Yes,94.2739743
+9,36,Male,Current Smoker,0,None,low cough,No,96.66172949
+10,27,Male,Ex-Smoker,0,None,low cough,No,96.26405145
+11,34,Female,Ex-Smoker,0,None,low cough,No,98.8486966
+12,43,Male,Current Smoker,0,None,low cough,No,96.29413947
+13,51,Female,Non-Smoker,1,Inhaler,high cough,Yes,91.22604568
+14,54,Male,Non-Smoker,1,Inhaler,high cough,Yes,88.45927189
+15,22,Female,Current Smoker,1,Inhaler,high cough,Yes,90.73145487
+16,53,Female,Non-Smoker,2,Controller Medication,medium cough,Yes,92.4266186
+17,39,Female,Current Smoker,2,Controller Medication,medium cough,Yes,93.50347089
+18,34,Male,Non-Smoker,2,Controller Medication,medium cough,Yes,92.81320744
+19,51,Male,Current Smoker,0,None,low cough,No,98.37763636
+20,37,Male,Non-Smoker,2,Controller Medication,medium cough,Yes,93.96796771
+21,52,Female,Ex-Smoker,0,None,low cough,No,98.38107817
+22,24,Female,Non-Smoker,0,None,low cough,No,97.22235638
+23,56,Female,Ex-Smoker,2,Controller Medication,medium cough,Yes,92.81885514
+24,23,Female,Current Smoker,1,Inhaler,high cough,Yes,89.6402984
+25,58,Male,Non-Smoker,0,None,low cough,No,96.88387942
+26,27,Male,Ex-Smoker,0,None,low cough,No,96.08146273
+27,41,Male,Non-Smoker,0,None,low cough,No,98.82680544
+28,27,Male,Current Smoker,0,None,low cough,No,97.69407446
+29,63,Male,Current Smoker,0,None,low cough,No,97.13678338
+30,25,Female,Current Smoker,1,Inhaler,high cough,Yes,89.94725278
+31,42,Male,Non-Smoker,1,Inhaler,high cough,Yes,91.61481432
+32,18,Female,Non-Smoker,0,None,low cough,No,97.44903401
+33,22,Female,Ex-Smoker,1,Inhaler,high cough,Yes,91.35619012
+34,54,Male,Non-Smoker,2,Controller Medication,medium cough,Yes,94.03533538
+35,22,Female,Ex-Smoker,2,Controller Medication,medium cough,Yes,94.88411896
+36,34,Female,Current Smoker,2,Controller Medication,medium cough,Yes,93.89719239
+37,20,Male,Current Smoker,0,None,low cough,No,97.62869723
+38,43,Male,Current Smoker,0,None,low cough,No,97.23686931
+39,19,Male,Non-Smoker,0,None,low cough,No,97.14385714
+40,65,Female,Non-Smoker,2,Controller Medication,medium cough,Yes,92.09364066
+41,22,Female,Current Smoker,0,None,low cough,No,98.93224844
+42,58,Female,Current Smoker,1,Inhaler,high cough,Yes,89.36522393
+43,59,Male,Current Smoker,1,Inhaler,high cough,Yes,89.63185611
+44,54,Male,Ex-Smoker,2,Controller Medication,medium cough,Yes,92.60156967
+45,57,Female,Ex-Smoker,1,Inhaler,high cough,Yes,91.39332883
+46,45,Male,Non-Smoker,0,None,low cough,No,98.49137183
+47,62,Female,Ex-Smoker,0,None,low cough,No,96.7014362
+48,39,Male,Non-Smoker,2,Controller Medication,medium cough,Yes,92.67006587
+49,43,Female,Non-Smoker,0,None,low cough,No,97.89076433
+50,20,Male,Current Smoker,0,None,low cough,No,97.42615302
+51,59,Female,Non-Smoker,0,None,low cough,No,98.68202412
+52,21,Female,Non-Smoker,0,None,low cough,No,98.467496
+53,58,Male,Current Smoker,0,None,low cough,No,97.31793309
+54,23,Male,Current Smoker,2,Controller Medication,medium cough,Yes,94.7828436
+55,48,Male,Current Smoker,0,None,low cough,No,98.61554696
+56,54,Female,Ex-Smoker,1,Inhaler,high cough,Yes,91.32201618
+57,47,Male,Ex-Smoker,0,None,low cough,No,98.25743996
+58,50,Male,Non-Smoker,0,None,low cough,No,97.71972658
+59,64,Female,Ex-Smoker,0,None,low cough,No,98.99454613
+60,52,Female,Ex-Smoker,0,None,low cough,No,98.16524152
+61,38,Male,Ex-Smoker,0,None,low cough,No,97.79484843
+62,28,Male,Ex-Smoker,0,None,low cough,No,98.74786953
+63,46,Male,Non-Smoker,2,Controller Medication,medium cough,Yes,94.33809366
+64,49,Male,Ex-Smoker,0,None,low cough,No,98.3470745
+65,60,Male,Ex-Smoker,1,Inhaler,high cough,Yes,89.864654
+66,47,Male,Current Smoker,2,Controller Medication,medium cough,Yes,93.90377858
+67,24,Female,Current Smoker,2,Controller Medication,medium cough,Yes,94.7653432
+68,43,Male,Non-Smoker,0,None,low cough,No,97.23841955
+69,41,Female,Non-Smoker,2,Controller Medication,medium cough,Yes,94.6714144
+70,49,Male,Ex-Smoker,0,None,low cough,No,96.95415835
+71,50,Female,Non-Smoker,2,Controller Medication,medium cough,Yes,92.70763169
+72,20,Male,Non-Smoker,0,None,low cough,No,96.19638805
+73,58,Female,Non-Smoker,1,Inhaler,high cough,Yes,91.82068721
+74,28,Female,Current Smoker,2,Controller Medication,medium cough,Yes,93.85251253
+75,39,Male,Non-Smoker,0,None,low cough,No,98.78699814
+76,65,Male,Non-Smoker,1,Inhaler,high cough,Yes,89.89602473
+77,43,Female,Ex-Smoker,1,Inhaler,high cough,Yes,88.97445284
+78,32,Female,Current Smoker,2,Controller Medication,medium cough,Yes,93.66576758
+79,63,Female,Non-Smoker,2,Controller Medication,medium cough,Yes,93.96124688
+80,58,Female,Ex-Smoker,0,None,low cough,No,96.09085741
+81,22,Female,Ex-Smoker,2,Controller Medication,medium cough,Yes,92.61327918
+82,37,Male,Ex-Smoker,1,Inhaler,high cough,Yes,91.82965175
+83,52,Female,Ex-Smoker,1,Inhaler,high cough,Yes,91.11238846
+84,51,Male,Current Smoker,2,Controller Medication,medium cough,Yes,94.89132107
+85,25,Female,Current Smoker,2,Controller Medication,medium cough,Yes,94.22350652
+86,30,Male,Ex-Smoker,0,None,low cough,No,96.67910313
+87,53,Male,Ex-Smoker,0,None,low cough,No,97.47093504
+88,38,Female,Ex-Smoker,0,None,low cough,No,97.15688959
+89,45,Male,Current Smoker,1,Inhaler,high cough,Yes,88.52648033
+90,38,Female,Ex-Smoker,0,None,low cough,No,96.80261043
+91,23,Male,Non-Smoker,0,None,low cough,No,96.81509051
+92,36,Female,Non-Smoker,0,None,low cough,No,96.85023888
+93,38,Female,Ex-Smoker,2,Controller Medication,medium cough,Yes,92.98034342
+94,34,Male,Current Smoker,0,None,low cough,No,98.88075668
+95,29,Female,Non-Smoker,0,None,low cough,No,97.90471633
+96,23,Male,Non-Smoker,0,None,low cough,No,98.4203069
+97,36,Male,Ex-Smoker,0,None,low cough,No,97.02280917
+98,46,Female,Non-Smoker,1,Inhaler,high cough,Yes,88.46522075
+99,34,Female,Non-Smoker,1,Inhaler,high cough,Yes,90.96479154
+100,23,Male,Ex-Smoker,1,Inhaler,high cough,Yes,89.67723431
+101,45,Male,Ex-Smoker,2,Controller Medication,medium cough,Yes,92.23880347
+102,33,Male,Current Smoker,0,None,low cough,No,98.04334937
+103,27,Male,Non-Smoker,0,None,low cough,No,97.07824698
+104,34,Female,Current Smoker,0,None,low cough,No,98.47004324
+105,27,Male,Ex-Smoker,0,None,low cough,No,97.46232007
+106,47,Female,Non-Smoker,2,Controller Medication,medium cough,Yes,93.48741991
+107,21,Male,Ex-Smoker,1,Inhaler,high cough,Yes,91.6773585
+108,44,Female,Non-Smoker,1,Inhaler,high cough,Yes,88.33472709
+109,44,Male,Non-Smoker,1,Inhaler,high cough,Yes,91.61411982
+110,52,Male,Ex-Smoker,0,None,low cough,No,96.21837083
+111,26,Male,Current Smoker,1,Inhaler,high cough,Yes,88.13811021
+112,48,Male,Current Smoker,2,Controller Medication,medium cough,Yes,94.62883802
+113,27,Male,Current Smoker,2,Controller Medication,medium cough,Yes,93.502423
+114,24,Female,Non-Smoker,0,None,low cough,No,97.97610753
+115,34,Female,Ex-Smoker,0,None,low cough,No,98.15189255
+116,49,Male,Current Smoker,0,None,low cough,No,98.57029506
+117,65,Male,Non-Smoker,0,None,low cough,No,98.94846761
+118,30,Female,Non-Smoker,1,Inhaler,high cough,Yes,88.87456461
+119,62,Female,Non-Smoker,0,None,low cough,No,96.2690157
+120,45,Female,Current Smoker,2,Controller Medication,medium cough,Yes,92.18461063
+121,58,Female,Non-Smoker,2,Controller Medication,medium cough,Yes,93.81134726
+122,48,Male,Non-Smoker,1,Inhaler,high cough,Yes,90.63194308
+123,63,Female,Ex-Smoker,1,Inhaler,high cough,Yes,90.61095727
+124,48,Male,Ex-Smoker,0,None,low cough,No,98.51181659
+125,51,Male,Non-Smoker,1,Inhaler,high cough,Yes,88.92297267
+126,26,Female,Current Smoker,0,None,low cough,No,96.02054402
+127,23,Female,Current Smoker,0,None,low cough,No,96.02262868
+128,27,Female,Ex-Smoker,0,None,low cough,No,97.46498731
+129,43,Female,Non-Smoker,0,None,low cough,No,98.76335451
+130,32,Female,Current Smoker,1,Inhaler,high cough,Yes,91.20188296
+131,23,Female,Non-Smoker,2,Controller Medication,medium cough,Yes,92.09147385
+132,29,Female,Ex-Smoker,2,Controller Medication,medium cough,Yes,94.37105868
+133,29,Male,Non-Smoker,0,None,low cough,No,97.27507682
+134,30,Female,Non-Smoker,0,None,low cough,No,96.2304412
+135,24,Male,Ex-Smoker,0,None,low cough,No,97.60728132
+136,27,Female,Current Smoker,0,None,low cough,No,97.59667072
+137,52,Male,Current Smoker,0,None,low cough,No,97.70869048
+138,34,Female,Current Smoker,0,None,low cough,No,96.8099652
+139,29,Female,Current Smoker,2,Controller Medication,medium cough,Yes,93.60912135
+140,52,Female,Non-Smoker,2,Controller Medication,medium cough,Yes,94.10724905
+141,24,Female,Non-Smoker,2,Controller Medication,medium cough,Yes,93.68459703
+142,41,Male,Current Smoker,2,Controller Medication,medium cough,Yes,92.3286886
+143,65,Male,Current Smoker,1,Inhaler,high cough,Yes,88.03785775
+144,33,Male,Ex-Smoker,0,None,low cough,No,97.28110347
+145,21,Male,Current Smoker,2,Controller Medication,medium cough,Yes,93.42428224
+146,36,Male,Current Smoker,0,None,low cough,No,97.89766586
+147,59,Female,Ex-Smoker,1,Inhaler,high cough,Yes,91.1328109
+148,27,Male,Current Smoker,1,Inhaler,high cough,Yes,88.74693358
+149,46,Male,Non-Smoker,0,None,low cough,No,97.90735256
+150,38,Female,Non-Smoker,1,Inhaler,high cough,Yes,88.85447384
+151,62,Female,Current Smoker,2,Controller Medication,medium cough,Yes,94.5219497
+152,30,Male,Ex-Smoker,0,None,low cough,No,97.28599354
+153,31,Female,Non-Smoker,0,None,low cough,No,96.14576118
+154,25,Female,Current Smoker,1,Inhaler,high cough,Yes,88.1542014
+155,45,Female,Current Smoker,1,Inhaler,high cough,Yes,91.65730575
+156,27,Female,Non-Smoker,2,Controller Medication,medium cough,Yes,92.75148974
+157,42,Male,Ex-Smoker,0,None,low cough,No,97.57744503
+158,29,Male,Non-Smoker,0,None,low cough,No,97.58131363
+159,18,Male,Ex-Smoker,1,Inhaler,high cough,Yes,89.08743719
+160,18,Male,Ex-Smoker,1,Inhaler,high cough,Yes,88.1018334
+161,26,Female,Non-Smoker,0,None,low cough,No,96.28910377
+162,44,Female,Current Smoker,2,Controller Medication,medium cough,Yes,94.63581646
+163,45,Male,Non-Smoker,0,None,low cough,No,97.78470482
+164,49,Female,Ex-Smoker,2,Controller Medication,medium cough,Yes,93.76269922
+165,42,Female,Non-Smoker,2,Controller Medication,medium cough,Yes,92.71206316
+166,59,Female,Ex-Smoker,0,None,low cough,No,98.63632373
+167,28,Female,Ex-Smoker,0,None,low cough,No,96.26277484
+168,34,Female,Current Smoker,0,None,low cough,No,97.48101556
+169,64,Male,Current Smoker,0,None,low cough,No,96.76348181
+170,41,Female,Current Smoker,0,None,low cough,No,97.84197147
+171,59,Female,Non-Smoker,1,Inhaler,high cough,Yes,90.13209657
+172,38,Male,Ex-Smoker,2,Controller Medication,medium cough,Yes,94.57329953
+173,41,Female,Non-Smoker,0,None,low cough,No,98.45275117
+174,46,Female,Current Smoker,1,Inhaler,high cough,Yes,88.3243676
+175,37,Female,Ex-Smoker,1,Inhaler,high cough,Yes,89.85505819
+176,41,Female,Ex-Smoker,0,None,low cough,No,96.78134002
+177,61,Male,Non-Smoker,2,Controller Medication,medium cough,Yes,93.23515222
+178,41,Female,Ex-Smoker,0,None,low cough,No,98.68586215
+179,21,Male,Ex-Smoker,0,None,low cough,No,97.75669919
+180,25,Female,Current Smoker,2,Controller Medication,medium cough,Yes,93.13692159
+181,33,Female,Current Smoker,1,Inhaler,high cough,Yes,91.94601666
+182,27,Male,Non-Smoker,2,Controller Medication,medium cough,Yes,93.71755054
+183,41,Female,Current Smoker,2,Controller Medication,medium cough,Yes,94.64065817
+184,39,Female,Ex-Smoker,2,Controller Medication,medium cough,Yes,94.04865167
+185,22,Male,Current Smoker,0,None,low cough,No,97.67193085
+186,28,Male,Non-Smoker,2,Controller Medication,medium cough,Yes,93.12849826
+187,24,Female,Non-Smoker,2,Controller Medication,medium cough,Yes,94.15482391
+188,46,Female,Non-Smoker,1,Inhaler,high cough,Yes,90.84079077
+189,29,Male,Ex-Smoker,0,None,low cough,No,96.23348347
+190,55,Male,Current Smoker,1,Inhaler,high cough,Yes,91.66975968
+191,35,Female,Current Smoker,2,Controller Medication,medium cough,Yes,93.41738499
+192,29,Male,Current Smoker,0,None,low cough,No,98.8234963
+193,27,Male,Ex-Smoker,1,Inhaler,high cough,Yes,89.2379269
+194,23,Male,Current Smoker,1,Inhaler,high cough,Yes,90.3249233
+195,49,Female,Ex-Smoker,1,Inhaler,high cough,Yes,89.03127199
+196,37,Female,Ex-Smoker,2,Controller Medication,medium cough,Yes,92.32088256
+197,26,Female,Non-Smoker,0,None,low cough,No,98.10394209
+198,52,Female,Non-Smoker,1,Inhaler,high cough,Yes,90.30931963
+199,20,Female,Non-Smoker,1,Inhaler,high cough,Yes,88.96136156
+200,29,Female,Non-Smoker,0,None,low cough,No,97.6132096
+201,60,Male,Current Smoker,2,Controller Medication,medium cough,Yes,92.89144805
+202,65,Male,Current Smoker,1,Inhaler,high cough,Yes,89.06015549
+203,64,Female,Current Smoker,0,None,low cough,No,97.37188122
+204,20,Male,Non-Smoker,0,None,low cough,No,98.11047069
+205,59,Female,Current Smoker,2,Controller Medication,medium cough,Yes,93.02215501
+206,50,Male,Ex-Smoker,0,None,low cough,No,97.02574845
+207,59,Female,Current Smoker,2,Controller Medication,medium cough,Yes,93.27422647
+208,20,Female,Current Smoker,1,Inhaler,high cough,Yes,88.17909346
+209,48,Male,Current Smoker,1,Inhaler,high cough,Yes,90.23892723
+210,47,Male,Non-Smoker,0,None,low cough,No,96.93265862
+211,65,Female,Ex-Smoker,0,None,low cough,No,96.14651344
+212,23,Male,Current Smoker,1,Inhaler,high cough,Yes,90.19951471
+213,48,Male,Ex-Smoker,0,None,low cough,No,98.99445471
+214,65,Male,Ex-Smoker,1,Inhaler,high cough,Yes,90.64637194
+215,54,Female,Current Smoker,0,None,low cough,No,97.34251215
+216,38,Male,Ex-Smoker,0,None,low cough,No,96.67750368
+217,24,Female,Current Smoker,0,None,low cough,No,97.4867804
+218,60,Female,Ex-Smoker,0,None,low cough,No,98.54040836
+219,27,Male,Ex-Smoker,2,Controller Medication,medium cough,Yes,94.36685605
+220,21,Female,Non-Smoker,0,None,low cough,No,96.28685789
+221,52,Female,Current Smoker,2,Controller Medication,medium cough,Yes,93.95142847
+222,44,Male,Non-Smoker,2,Controller Medication,medium cough,Yes,92.05488582
+223,22,Female,Current Smoker,0,None,low cough,No,96.51570822
+224,30,Female,Ex-Smoker,0,None,low cough,No,97.61815653
+225,19,Female,Current Smoker,0,None,low cough,No,98.69609358
+226,30,Female,Current Smoker,1,Inhaler,high cough,Yes,90.01147449
+227,61,Female,Non-Smoker,0,None,low cough,No,96.86825082
+228,27,Female,Non-Smoker,0,None,low cough,No,97.11987952
+229,45,Male,Non-Smoker,1,Inhaler,high cough,Yes,88.27202385
+230,64,Male,Non-Smoker,2,Controller Medication,medium cough,Yes,93.34470472
+231,29,Female,Non-Smoker,2,Controller Medication,medium cough,Yes,94.7565753
+232,18,Male,Non-Smoker,2,Controller Medication,medium cough,Yes,92.2019396
+233,56,Female,Ex-Smoker,0,None,low cough,No,97.78369703
+234,30,Male,Ex-Smoker,2,Controller Medication,medium cough,Yes,94.19636689
+235,64,Female,Current Smoker,2,Controller Medication,medium cough,Yes,94.22000234
+236,26,Female,Current Smoker,0,None,low cough,No,98.14287437
+237,45,Male,Non-Smoker,0,None,low cough,No,96.48652455
+238,45,Female,Non-Smoker,1,Inhaler,high cough,Yes,90.29925114
+239,64,Female,Non-Smoker,1,Inhaler,high cough,Yes,91.29873582
+240,64,Male,Non-Smoker,0,None,low cough,No,97.25012251
+241,58,Female,Current Smoker,1,Inhaler,high cough,Yes,90.73335665
+242,22,Male,Non-Smoker,1,Inhaler,high cough,Yes,89.34463162
+243,39,Male,Non-Smoker,2,Controller Medication,medium cough,Yes,94.24617457
+244,45,Female,Non-Smoker,1,Inhaler,high cough,Yes,90.38861608
+245,33,Male,Non-Smoker,1,Inhaler,high cough,Yes,88.02793187
+246,31,Female,Non-Smoker,0,None,low cough,No,97.71606781
+247,63,Female,Current Smoker,0,None,low cough,No,98.46782735
+248,63,Female,Current Smoker,0,None,low cough,No,97.04337524
+249,46,Female,Non-Smoker,2,Controller Medication,medium cough,Yes,92.60619911
+250,54,Female,Non-Smoker,1,Inhaler,high cough,Yes,89.76619844
+251,21,Female,Current Smoker,2,Controller Medication,medium cough,Yes,92.57799422
+252,32,Male,Current Smoker,0,None,low cough,No,98.19468551
+253,54,Female,Non-Smoker,2,Controller Medication,medium cough,Yes,94.97516945
+254,58,Female,Current Smoker,0,None,low cough,No,97.54854049
+255,19,Female,Current Smoker,0,None,low cough,No,97.70887015
+256,42,Male,Current Smoker,0,None,low cough,No,98.44750145
+257,40,Male,Current Smoker,0,None,low cough,No,97.4925115
+258,43,Male,Non-Smoker,2,Controller Medication,medium cough,Yes,93.48070779
+259,40,Male,Ex-Smoker,0,None,low cough,No,98.62881942
+260,51,Male,Non-Smoker,2,Controller Medication,medium cough,Yes,93.17563604
+261,32,Female,Ex-Smoker,1,Inhaler,high cough,Yes,89.13098871
+262,28,Male,Current Smoker,1,Inhaler,high cough,Yes,90.02346857
+263,59,Male,Ex-Smoker,1,Inhaler,high cough,Yes,91.12988227
+264,47,Female,Current Smoker,2,Controller Medication,medium cough,Yes,92.84856327
+265,19,Male,Ex-Smoker,2,Controller Medication,medium cough,Yes,93.97415952
+266,32,Female,Ex-Smoker,0,None,low cough,No,98.43629341
+267,43,Female,Ex-Smoker,2,Controller Medication,medium cough,Yes,92.77870345
+268,50,Male,Non-Smoker,2,Controller Medication,medium cough,Yes,94.2103457
+269,29,Male,Non-Smoker,0,None,low cough,No,98.63361989
+270,29,Female,Non-Smoker,2,Controller Medication,medium cough,Yes,94.29315263
+271,48,Male,Current Smoker,1,Inhaler,high cough,Yes,91.10270005
+272,29,Male,Ex-Smoker,0,None,low cough,No,97.01182151
+273,35,Female,Non-Smoker,0,None,low cough,No,97.23884105
+274,51,Male,Ex-Smoker,0,None,low cough,No,97.02493359
+275,65,Female,Non-Smoker,2,Controller Medication,medium cough,Yes,94.85384784
+276,63,Female,Ex-Smoker,0,None,low cough,No,97.19762538
+277,31,Female,Non-Smoker,0,None,low cough,No,96.92070814
+278,63,Female,Current Smoker,2,Controller Medication,medium cough,Yes,93.32209426
+279,42,Female,Non-Smoker,0,None,low cough,No,96.3955916
+280,44,Male,Ex-Smoker,2,Controller Medication,medium cough,Yes,94.34275497
+281,59,Male,Non-Smoker,0,None,low cough,No,97.38879423
+282,18,Male,Non-Smoker,1,Inhaler,high cough,Yes,91.94559082
+283,53,Male,Ex-Smoker,0,None,low cough,No,98.3841877
+284,49,Male,Ex-Smoker,2,Controller Medication,medium cough,Yes,94.09926008
+285,20,Male,Current Smoker,2,Controller Medication,medium cough,Yes,92.85362017
+286,30,Male,Ex-Smoker,0,None,low cough,No,98.56447894
+287,21,Female,Current Smoker,2,Controller Medication,medium cough,Yes,92.64729733
+288,21,Female,Ex-Smoker,1,Inhaler,high cough,Yes,90.22047532
+289,21,Female,Non-Smoker,2,Controller Medication,medium cough,Yes,92.2656333
+290,22,Male,Ex-Smoker,0,None,low cough,No,97.1793555
+291,47,Female,Ex-Smoker,0,None,low cough,No,96.65501654
+292,19,Male,Ex-Smoker,2,Controller Medication,medium cough,Yes,94.41846251
+293,28,Female,Non-Smoker,1,Inhaler,high cough,Yes,90.56416042
+294,36,Female,Current Smoker,0,None,low cough,No,96.49636509
+295,49,Male,Non-Smoker,1,Inhaler,high cough,Yes,90.61235191
+296,25,Female,Current Smoker,0,None,low cough,No,97.68771296
+297,20,Male,Ex-Smoker,0,None,low cough,No,97.82401914
+298,25,Female,Non-Smoker,0,None,low cough,No,98.68579071
+299,18,Male,Ex-Smoker,0,None,low cough,No,97.10881794
+300,59,Female,Current Smoker,0,None,low cough,No,98.90994496
