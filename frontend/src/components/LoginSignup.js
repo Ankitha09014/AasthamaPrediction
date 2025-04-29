@@ -1,6 +1,7 @@
-// src/components/LoginSignup.js
 import React, { useState } from "react";
 import "./LoginSignup.css";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 function LoginSignup() {
   const [isLogin, setIsLogin] = useState(true);
@@ -10,25 +11,65 @@ function LoginSignup() {
     password: "",
   });
 
+  const navigate = useNavigate();
+
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
+  const validateForm = () => {
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+    if (!emailPattern.test(form.email)) {
+      toast.error("Email should be a valid @gmail.com address.");
+      return false;
+    }
+
+    const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}$/;
+    if (!passwordPattern.test(form.password)) {
+      toast.error("Password should be at least 8 characters, with uppercase, lowercase, number, and special character.");
+      return false;
+    }
+
+    return true;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!validateForm()) return;
+
     const endpoint = isLogin ? "/api/login" : "/api/signup";
     const payload = isLogin
       ? { email: form.email, password: form.password }
       : form;
 
-    const res = await fetch(`http://localhost:4000${endpoint}`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    });
+    try {
+      const res = await fetch(`http://localhost:5000${endpoint}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        credentials: "include",
+        body: JSON.stringify(payload),
+      });
 
-    const data = await res.json();
-    alert(data.message || (isLogin ? "Login successful" : "Signup successful"));
+      const data = await res.json();
+
+      if (res.ok) {
+        toast.success(data.message);
+      
+        if (isLogin) {
+          localStorage.setItem("user", JSON.stringify({ email: form.email }));
+          navigate("/predict"); // ✅ redirect to /predict
+        } else {
+          navigate("/"); // after signup, redirect to home
+        }
+      }
+       else {
+        toast.error(data.message);
+      }
+    } catch (err) {
+      console.error(err);
+      toast.error("Something went wrong");
+    }
   };
 
   return (

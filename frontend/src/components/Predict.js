@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+// Predict.js
+import React, { useState } from "react";
 import "./Predict.css";
 
-function App() {
+function Predict() {
   const [form, setForm] = useState({
     age: "",
     gender: "",
@@ -9,19 +10,9 @@ function App() {
     medvalue: "",
     intensity_cough: "",
   });
+
   const [result, setResult] = useState("");
   const [metrics, setMetrics] = useState(null);
-
-  // Reset form fields on component mount to ensure they are empty
-  useEffect(() => {
-    setForm({
-      age: "",
-      gender: "",
-      smoking_status: "",
-      medvalue: "",
-      intensity_cough: "",
-    });
-  }, []);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -29,109 +20,73 @@ function App() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await fetch("http://localhost:5000/predict", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(form),
-    });
-    const data = await res.json();
-    setResult(data.prediction || "Error: " + data.error);
-    setMetrics({
-      accuracy: data.accuracy,
-      precision: data.precision,
-      recall: data.recall,
-      f1: data.f1,
-      sensitivity: data.sensitivity,
-      specificity: data.specificity,
-    });
+    try {
+      const res = await fetch("http://localhost:5001/predict", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      const data = await res.json();
+
+      if (data.error) {
+        setResult("Error: " + data.error);
+      } else {
+        setResult(data.prediction);
+        setMetrics({
+          accuracy: data.accuracy,
+          precision: data.precision,
+          recall: data.recall,
+          f1: data.f1,
+          sensitivity: data.sensitivity,
+          specificity: data.specificity,
+        });
+      }
+    } catch (error) {
+      setResult("Error: Failed to fetch prediction.");
+    }
   };
 
   return (
     <div className="App">
-      <h2 className="title">Asthma Prediction</h2>
-      <form onSubmit={handleSubmit} className="form-container">
-        <div className="input-group">
-          <input
-            name="age"
-            placeholder="Age"
-            type="number"
-            onChange={handleChange}
-            required
-            className="input-field"
-            value={form.age}  // Set value to the form state
-          />
-        </div>
-        <div className="input-group">
-          <select
-            name="gender"
-            onChange={handleChange}
-            className="input-field"
-            value={form.gender}  // Set value to the form state
-          >
-            <option value="">Select Gender</option>  {/* Default empty value */}
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-          </select>
-        </div>
-        <div className="input-group">
-          <select
-            name="smoking_status"
-            onChange={handleChange}
-            className="input-field"
-            value={form.smoking_status}  // Set value to the form state
-          >
-            <option value="">Select Smoking Status</option>  {/* Default empty value */}
-            <option value="Non-Smoker">Non-Smoker</option>
-            <option value="Ex-Smoker">Ex-Smoker</option>
-            <option value="Current Smoker">Current Smoker</option>
-          </select>
-        </div>
-        <div className="input-group">
-          <input
-            name="medvalue"
-            placeholder="Medvalue"
-            type="number"
-            onChange={handleChange}
-            required
-            className="input-field"
-            value={form.medvalue}  // Set value to the form state
-          />
-        </div>
-        <div className="input-group">
-          <select
-            name="intensity_cough"
-            onChange={handleChange}
-            className="input-field"
-            value={form.intensity_cough}  // Set value to the form state
-          >
-            <option value="">Select Cough Intensity</option>  {/* Default empty value */}
-            <option value="low">Low</option>
-            <option value="medium">Medium</option>
-            <option value="high">High</option>
-          </select>
-        </div>
-        <button type="submit" className="predict-button">
-          Predict
-        </button>
+      <h2>Asthma Prediction</h2>
+      <form onSubmit={handleSubmit}>
+        <input type="number" name="age" placeholder="Age" value={form.age} onChange={handleChange} required />
+        <select name="gender" value={form.gender} onChange={handleChange} required>
+          <option value="">Select Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+        <select name="smoking_status" value={form.smoking_status} onChange={handleChange} required>
+          <option value="">Select Smoking Status</option>
+          <option value="Non-Smoker">Non-Smoker</option>
+          <option value="Ex-Smoker">Ex-Smoker</option>
+          <option value="Current Smoker">Current Smoker</option>
+        </select>
+        <input type="number" name="medvalue" placeholder="Medvalue" value={form.medvalue} onChange={handleChange} required />
+        <select name="intensity_cough" value={form.intensity_cough} onChange={handleChange} required>
+          <option value="">Select Cough Intensity</option>
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+        <button type="submit">Predict</button>
       </form>
 
-      {result && <div className="result">Prediction: {result}</div>}
+      {result && <h3>Prediction: {result}</h3>}
 
       {metrics && (
-        <div className="metrics-container">
-          <h3 className="metrics-title">Model Metrics</h3>
-          <ul className="metrics-list">
-            <li>Accuracy: {metrics.accuracy}</li>
-            <li>Precision: {metrics.precision}</li>
-            <li>Recall: {metrics.recall}</li>
-            <li>F1 Score: {metrics.f1}</li>
-            <li>Sensitivity: {metrics.sensitivity}</li>
-            <li>Specificity: {metrics.specificity}</li>
-          </ul>
-        </div>
+        <ul>
+          <li>Accuracy: {metrics.accuracy}</li>
+          <li>Precision: {metrics.precision}</li>
+          <li>Recall: {metrics.recall}</li>
+          <li>F1 Score: {metrics.f1}</li>
+          <li>Sensitivity: {metrics.sensitivity}</li>
+          <li>Specificity: {metrics.specificity}</li>
+        </ul>
       )}
     </div>
   );
 }
 
-export default App;
+export default Predict;

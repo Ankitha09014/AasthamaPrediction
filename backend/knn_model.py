@@ -6,56 +6,61 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_sc
 import joblib
 
 # Load the dataset
-data = pd.read_csv("./asthma_modified_dataset.csv")
+data = pd.read_csv("asthma_modified_dataset.csv")
 
-# Clean 'Intensity of cough' column to get rid of extra text
+# Clean and preprocess the 'Intensity of cough' column
 data['Intensity of cough'] = data['Intensity of cough'].apply(lambda x: 'low' if 'low' in x else ('medium' if 'medium' in x else 'high'))
 
-# Encode categorical variables
+# Encoding categorical variables
 le_gender = LabelEncoder()
 le_smoking = LabelEncoder()
 le_cough = LabelEncoder()
 le_diagnosis = LabelEncoder()
 
+# Encoding 'Gender' column
 data['Gender'] = le_gender.fit_transform(data['Gender'])
+
+# Encoding 'Smoking_Status' column
 data['Smoking_Status'] = le_smoking.fit_transform(data['Smoking_Status'])
+
+# Encoding 'Intensity of cough' column
 data['Intensity of cough'] = le_cough.fit_transform(data['Intensity of cough'])
+
+# Encoding 'Asthma_Diagnosis' column
 data['Asthma_Diagnosis'] = le_diagnosis.fit_transform(data['Asthma_Diagnosis'])
 
-# Define features and target variable
+# Dropping unnecessary 'Medication' column as it is not used in the prediction
+data.drop(columns=['Medication'], inplace=True)
+
+# Define features (X) and target (y)
 X = data[['Age', 'Gender', 'Smoking_Status', 'Medvalue', 'Intensity of cough']]
 y = data['Asthma_Diagnosis']
 
-# Split the data into training and testing sets
+# Split the dataset into training and testing sets (70% training, 30% testing)
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
 
-# Initialize the KNN model
+# Initialize the KNN model with 3 neighbors
 knn = KNeighborsClassifier(n_neighbors=3)
 
 # Fit the model on the training data
 knn.fit(X_train, y_train)
 
-# Make predictions
+# Make predictions on the test set
 predictions = knn.predict(X_test)
 
-# Calculate accuracy
+# Calculate accuracy and other metrics
 accuracy = accuracy_score(y_test, predictions)
-print("Accuracy of the KNN model:", accuracy)
-
-# Precision, recall, F1 score, etc.
 precision = precision_score(y_test, predictions)
 recall = recall_score(y_test, predictions)
 f1 = f1_score(y_test, predictions)
 
-# Calculate specificity
-tn, fp, fn, tp = confusion_matrix(y_test, predictions).ravel()
-specificity = tn / (tn + fp)
-
+# Print the evaluation metrics
+print("Accuracy of the KNN model:", accuracy)
 print("Precision:", precision)
 print("Recall:", recall)
 print("F1-score:", f1)
-print("Sensitivity (Recall):", recall)
-print("Specificity:", specificity)
+
+# Confusion Matrix
 print("Confusion Matrix:")
 print(confusion_matrix(y_test, predictions))
 
@@ -68,11 +73,11 @@ print("Mean Absolute Error (MAE):", mae)
 print("Mean Squared Error (MSE):", mse)
 print("R-squared:", r2)
 
-# Save model and encoders
+# Save the model and encoders for later use
 joblib.dump(knn, 'knn_model.pkl')
 joblib.dump(le_gender, 'le_gender.pkl')
 joblib.dump(le_smoking, 'le_smoking.pkl')
 joblib.dump(le_cough, 'le_cough.pkl')
 joblib.dump(le_diagnosis, 'le_diagnosis.pkl')
 
-print("Model and encoders saved!")
+print("Model and encoders saved successfully!")
