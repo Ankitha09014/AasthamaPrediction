@@ -5,7 +5,8 @@
   background-color: #f4f9fd;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  margin-top: 100px;
+  margin-top: 200px;
+  max-height: 1000px;
 }
 
 h2 {
@@ -17,7 +18,7 @@ h2 {
 form {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 3rem;
 }
 
 input,

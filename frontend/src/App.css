@@ -1,14 +1,20 @@
 /* App.css */
+html {
+  min-height: 100%;
+  background-image: url("https://img.freepik.com/free-vector/abstract-medical-wallpaper-template-design_53876-61802.jpg"); /* ✅ Use the correct path */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f0f4f8;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+  background: transparent; /* Let html background show through */
 }
+
 
 .App {
   background-color: #fff;
@@ -95,4 +101,19 @@ body {
   font-size: 1.1em;
   color: #333;
   margin: 5px 0;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+body {
+  background-image: url("https://img.freepik.com/free-vector/abstract-medical-wallpaper-template-design_53876-61802.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;  /* <- This keeps the image fixed during scroll */
+  background-position: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }

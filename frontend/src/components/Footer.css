@@ -9,6 +9,8 @@
   text-align: center;
   z-index: 999;             /* Keep above content */
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+  margin-top: auto;
+  margin: 0%;
 }
 
 .footer p {

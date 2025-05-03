@@ -1,12 +1,13 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom'; // <--- Add useLocation
 
+import GraphPage from './components/GraphPage';
 import Navbar from './components/Navbar';
 import About from './components/About';
 import LoginSignup from './components/LoginSignup';
 import Predict from './components/Predict';
 import Footer from './components/Footer';
-import asthmaImage from './components/asthma.jpg'; // Ensure this path is correct
+import asthmaImage from './components/asthma.jpg';
 import './components/Home.css';
 import './App.css';
 import './components/Navbar.css';
@@ -29,20 +30,27 @@ const Home = () => (
 );
 
 function App() {
+  const location = useLocation(); // <--- Use this hook
+
+  // Hide footer on /login route
+  const hideFooterRoutes = ['/login'];
+  const shouldHideFooter = hideFooterRoutes.includes(location.pathname);
+
   return (
-    <Router>
-      <Navbar /> {/* Always visible */}
+    <>
+      <Navbar />
       <ToastContainer />
       <div className="main-content">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/login" element={<LoginSignup />} />
-          <Route path="/predict" element={<Predict />} />
-        </Routes>
+      <Routes>
+  <Route path="/" element={<Home />} />
+  <Route path="/about" element={<About />} />
+  <Route path="/login" element={<LoginSignup />} />
+  <Route path="/predict" element={<Predict />} />
+  <Route path="/graph" element={<GraphPage />} />
+</Routes>
       </div>
-      <Footer />
-    </Router>
+      {!shouldHideFooter && <Footer />}
+    </>
   );
 }
 

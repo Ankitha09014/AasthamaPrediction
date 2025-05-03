@@ -38,19 +38,20 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <h1 className="logo">Asthma Predictor</h1>
+      <h1 className="logo">Asthama Predictor</h1>
       <ul className="nav-links">
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/about">About</Link></li>
-        {!isLoggedIn ? (
-          <li><Link to="/login">Login/Signup</Link></li>
-        ) : (
-          <>
-            <li><Link to="/predict">Predict</Link></li>
-            <li><button onClick={handleLogout}>Logout</button></li>
-          </>
-        )}
-      </ul>
+  <li><Link to="/">Home</Link></li>
+  <li><Link to="/about">About</Link></li>
+  {!isLoggedIn ? (
+    <li><Link to="/login">Login/Signup</Link></li>
+  ) : (
+    <>
+      <li><Link to="/predict">Predict</Link></li>
+      <li><Link to="/graph">Graph</Link></li>{/* ✅ Add this line */}
+      <li><button onClick={handleLogout}>Logout</button></li>
+    </>
+  )}
+</ul>
     </nav>
   );
 };

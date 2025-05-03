@@ -6,7 +6,7 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_sc
 import joblib
 
 # Load the dataset
-data = pd.read_csv("asthma_modified_dataset.csv")
+data = pd.read_csv(r"C:\Users\ankitha\Desktop\Fullstack_Asthma-Prediction_Website\backend\asthma_modified_dataset.csv")
 
 # Clean and preprocess the 'Intensity of cough' column
 data['Intensity of cough'] = data['Intensity of cough'].apply(lambda x: 'low' if 'low' in x else ('medium' if 'medium' in x else 'high'))
