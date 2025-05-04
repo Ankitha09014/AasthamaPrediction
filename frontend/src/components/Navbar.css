@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   height: 100px;
-  background-color: #0c0c0c;
+  background-color: hsl(258, 80%, 47%);
   display: flex;
   align-items: center;
   justify-content: space-between;

@@ -1,3 +1,4 @@
+*App.css*
 /* App.css */
 html {
   min-height: 100%;
@@ -55,19 +56,44 @@ body {
   outline: none;
 }
 
+/* Predict Button */
+.predict-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
 .predict-button {
-  background-color: #3498db;
+  background-color: black;
   color: white;
-  padding: 14px;
-  font-size: 1.2em;
+  padding: 14px 20px;
+  font-size: 18px;
   border: none;
-  border-radius: 8px;
+  border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .predict-button:hover {
-  background-color: #2980b9;
+  background-color: #333;
+}
+
+/* Center and stack resource links */
+.resource-links {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.resource-links a {
+  display: block; /* Ensures each anchor tag is in a new line */
+  font-size: 16px;
+  color: #111212;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 10px 0; /* Adds spacing between each link */
+}
+
+.resource-links a:hover {
+  text-decoration: underline;
 }
 
 .result {
@@ -115,5 +141,5 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;  /* <- This keeps the image fixed during scroll */
   background-position: center;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }

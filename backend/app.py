@@ -14,7 +14,7 @@ le_smoking = joblib.load('le_smoking.pkl')
 le_cough = joblib.load('le_cough.pkl')
 le_diagnosis = joblib.load('le_diagnosis.pkl')
 
-# Load dataset for metrics
+# Load dataset and preprocess
 data = pd.read_csv(r"C:\Users\ankitha\Desktop\Fullstack_Asthma-Prediction_Website\backend\asthma_modified_dataset.csv")
 data['Intensity of cough'] = data['Intensity of cough'].apply(lambda x: 'low' if 'low' in x.lower() else ('medium' if 'medium' in x.lower() else 'high'))
 
@@ -25,26 +25,24 @@ data['Asthma_Diagnosis'] = le_diagnosis.transform(data['Asthma_Diagnosis'])
 
 X = data[['Age', 'Gender', 'Smoking_Status', 'Medvalue', 'Intensity of cough']]
 y = data['Asthma_Diagnosis']
+
+# Predict and calculate metrics
 preds = model.predict(X)
 
-# Calculate accuracy and other metrics
 accuracy = accuracy_score(y, preds)
 precision = precision_score(y, preds)
 recall = recall_score(y, preds)
 f1 = f1_score(y, preds)
 
-# Confusion Matrix and other error metrics
 tn, fp, fn, tp = confusion_matrix(y, preds).ravel()
 sensitivity = recall
 specificity = tn / (tn + fp)
 
-# Calculate Mean Absolute Error (MAE), Mean Squared Error (MSE) and R² score
 mae = mean_absolute_error(y, preds)
 mse = mean_squared_error(y, preds)
 r2 = r2_score(y, preds)
 
-# Get confusion matrix
-conf_matrix = confusion_matrix(y, preds).tolist()  # Convert the matrix to a list of lists
+conf_matrix = confusion_matrix(y, preds).tolist()
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -56,13 +54,12 @@ def predict():
         medvalue = float(input_data['medvalue'])
         cough = le_cough.transform([input_data['intensity_cough']])[0]
 
-        input_df = pd.DataFrame([[age, gender, smoking, medvalue, cough]], 
-                                 columns=['Age', 'Gender', 'Smoking_Status', 'Medvalue', 'Intensity of cough'])
+        input_df = pd.DataFrame([[age, gender, smoking, medvalue, cough]],
+                                columns=['Age', 'Gender', 'Smoking_Status', 'Medvalue', 'Intensity of cough'])
 
         pred = model.predict(input_df)
         label = le_diagnosis.inverse_transform(pred)[0]
 
-        # Send response with performance, error metrics, and confusion matrix
         return jsonify({
             "prediction": label,
             "accuracy": float(accuracy),
@@ -74,11 +71,11 @@ def predict():
             "mae": float(mae),
             "mse": float(mse),
             "r2": float(r2),
-            "confusion_matrix": conf_matrix  # Add confusion matrix to the response
+            "confusion_matrix": conf_matrix
         })
 
     except Exception as e:
         return jsonify({'error': str(e)})
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5001)  # Run Flask on port 5001
+    app.run(debug=True, port=5001)

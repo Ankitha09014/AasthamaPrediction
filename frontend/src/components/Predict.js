@@ -55,12 +55,12 @@ function Predict() {
           mae: data.mae,
           mse: data.mse,
           r2: data.r2,
-          confusion_matrix: data.confusion_matrix, // Add this
+          confusion_matrix: data.confusion_matrix,
         };
         setMetrics(newMetrics);
         localStorage.setItem("asthmaMetrics", JSON.stringify(newMetrics));
 
-        // Navigate to graph page after setting metrics
+        // ✅ Redirect to graph page after prediction
         
       }
     } catch (error) {
@@ -71,7 +71,6 @@ function Predict() {
   return (
     <div className="App">
       <ToastContainer />
-
       <h2>Asthma Prediction</h2>
       <form onSubmit={handleSubmit}>
         <input
@@ -111,18 +110,18 @@ function Predict() {
       {result && <h3>Prediction: {result}</h3>}
 
       {metrics && (
-        <ul>
-          <li>Accuracy: {metrics.accuracy}</li>
-          <li>Precision: {metrics.precision}</li>
-          <li>Recall: {metrics.recall}</li>
-          <li>F1 Score: {metrics.f1}</li>
-          <li>Sensitivity: {metrics.sensitivity}</li>
-          <li>Specificity: {metrics.specificity}</li>
-          <li>MAE: {metrics.mae}</li>
-          <li>MSE: {metrics.mse}</li>
-          <li>R²: {metrics.r2}</li>
-        </ul>
-      )}
+    <div className="metrics-container">
+    <ul>
+      <li>Accuracy: {metrics.accuracy}</li>
+      <li>Precision: {metrics.precision}</li>
+      <li>Recall: {metrics.recall}</li>
+      <li>F1 Score: {metrics.f1}</li>
+      <li>Sensitivity: {metrics.sensitivity}</li>
+      <li>Specificity: {metrics.specificity}</li>
+    </ul>
+  </div>
+)}
+
     </div>
   );
 }

@@ -60,17 +60,18 @@ function Graph({ metrics }) {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th>Actual: No</th>
-            <td>{cm[0][0]}</td>
-            <td>{cm[0][1]}</td>
-          </tr>
-          <tr>
-            <th>Actual: Yes</th>
-            <td>{cm[1][0]}</td>
-            <td>{cm[1][1]}</td>
-          </tr>
-        </tbody>
+  <tr>
+    <th>Actual: No</th>
+    <td title="True Negative">{cm[0][0]}</td>
+    <td title="False Positive">{cm[0][1]}</td>
+  </tr>
+  <tr>
+    <th>Actual: Yes</th>
+    <td title="False Negative">{cm[1][0]}</td>
+    <td title="True Positive">{cm[1][1]}</td>
+  </tr>
+</tbody>
+
       </table>
     </div>
   );

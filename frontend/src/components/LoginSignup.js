@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import "./LoginSignup.css";
 import { toast } from "react-toastify";
@@ -39,38 +40,36 @@ function LoginSignup() {
     if (!validateForm()) return;
 
     const endpoint = isLogin ? "/api/login" : "/api/signup";
-    const payload = isLogin
-      ? { email: form.email, password: form.password }
-      : form;
+    const payload = isLogin ? { email: form.email, password: form.password } : form;
 
     try {
-      const res = await fetch(`http://localhost:5000${endpoint}`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        credentials: "include",
-        body: JSON.stringify(payload),
-      });
+        const res = await fetch(`http://localhost:5000${endpoint}`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            credentials: "include",
+            body: JSON.stringify(payload),
+        });
 
-      const data = await res.json();
+        const data = await res.json();
 
-      if (res.ok) {
-        toast.success(data.message);
-      
-        if (isLogin) {
-          localStorage.setItem("user", JSON.stringify({ email: form.email }));
-          navigate("/predict"); // ✅ redirect to /predict
+        if (res.ok) {
+            toast.success(data.message);
+
+            if (isLogin) {
+                localStorage.setItem("user", JSON.stringify({ email: form.email }));
+                navigate("/predict"); // Redirect to prediction page
+            } else {
+                navigate("/"); // Redirect to home after signup
+            }
         } else {
-          navigate("/"); // after signup, redirect to home
+            toast.error(data.message);
+            alert(data.message); // Show alert for duplicate email or other issues
         }
-      }
-       else {
-        toast.error(data.message);
-      }
     } catch (err) {
-      console.error(err);
-      toast.error("Something went wrong");
+        console.error(err);
+        toast.error("Something went wrong");
     }
-  };
+};
 
   return (
     <div className="auth-container">

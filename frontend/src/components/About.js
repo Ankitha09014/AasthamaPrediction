@@ -67,14 +67,9 @@ const About = () => {
 
         {/* Then: About Us */}
         <section className="about-section">
-          <h2>About Us</h2>
+          <h2>About This Project</h2>
           <p>
-            In Asthma prediction, we specialize in forecasting and analytics across finance, technology, and healthcare.
-            Our mission is to empower businesses and individuals with data-driven insights and forward-looking predictions.
-          </p>
-          <p>
-            With a team of expert analysts and a robust data modeling framework, we help you make smart, timely decisions.
-            We believe in transparency, accuracy, and staying ahead of trends to bring unmatched predictive value.
+          In this project, a full-stack web application for asthma prediction was developed, integrating machine learning with a user-friendly interface. The system utilizes a K-Nearest Neighbors (KNN) model trained on a medical dataset, which provides real-time asthma predictions based on user inputs. The backend is built using Flask to serve the machine learning model, while MongoDB and Node.js/Express handle user authentication and data management. The frontend, developed in React, offers a dynamic and responsive interface to display predictions along with key performance metrics such as accuracy, precision, recall, and F1-score. This application aims to help individuals monitor asthma risks and seek timely medical attention, contributing to improved healthcare outcomes. The system is designed to be easily scalable and adaptable to other healthcare prediction tasks.
           </p>
         </section>
       </main>

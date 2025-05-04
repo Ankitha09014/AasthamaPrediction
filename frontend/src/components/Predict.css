@@ -62,3 +62,16 @@ ul {
 li {
   margin-bottom: 0.5rem;
 }
+.metrics-container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.metrics-container ul {
+  text-align: left;
+  padding: 1rem 2rem;
+  background-color: #e8f0fe;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}

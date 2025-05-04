@@ -1,3 +1,4 @@
+
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -55,7 +56,7 @@ app.post('/api/signup', async (req, res) => {
         // Check if the email already exists in the database
         const existingUser = await User.findOne({ email });
         if (existingUser) {
-            return res.status(400).json({ message: 'User already exists with this email.', redirect: 'http://localhost:3000/' });
+            return res.status(400).json({ message: 'User already exists with this email. Please use a different email or log in.' });
         }
 
         // Hash the password before saving to DB
@@ -64,12 +65,14 @@ app.post('/api/signup', async (req, res) => {
 
         // Save user to the database
         await user.save();
-        res.json({ message: 'Signup successful', redirect: 'http://localhost:3000/login' });
+        res.json({ message: 'Signup successful! Redirecting...', redirect: 'http://localhost:3000/login' });
     } catch (err) {
         console.error(err);
-        res.status(500).json({ message: 'Server error. Please try again later.', redirect: 'http://localhost:3000/' });
+        res.status(500).json({ message: 'Server error. Please try again later.' });
     }
 });
+
+
 
 
 // Login Route

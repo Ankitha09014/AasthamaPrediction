@@ -26,8 +26,33 @@ const Home = () => (
       health data such as oxygen levels, medication use, and cough intensity. This can assist healthcare
       providers in taking proactive measures for better patient care.
     </p>
+    <p>
+      Do You have asthma? Click the button below to find out!
+    </p>
+
+    {/* Predict Button */}
+    <div className="predict-container">
+      <button 
+        className="predict-button"
+        onClick={() => {
+          alert("You have to log in first to predict if you have asthma.");
+          window.location.href = "http://localhost:3000/login";
+        }}
+      >
+        Predict
+      </button>
+    </div>
+
+    {/* Additional Information Links */}
+    <div className="resource-links">
+      <p>Want to learn more? Check out these resources:</p>
+      <a href="https://www.who.int/news-room/fact-sheets/detail/asthma" target="_blank" rel="noopener noreferrer">WHO - Asthma Facts</a>
+      <a href="https://www.cdc.gov/asthma/default.htm" target="_blank" rel="noopener noreferrer">CDC - Asthma Resources</a>
+      <a href="https://www.mayoclinic.org/diseases-conditions/asthma/symptoms-causes/syc-20369653" target="_blank" rel="noopener noreferrer">Mayo Clinic - Asthma Overview</a>
+    </div>
   </div>
 );
+
 
 function App() {
   const location = useLocation(); // <--- Use this hook
